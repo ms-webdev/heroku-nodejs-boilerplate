@@ -54,7 +54,7 @@ $ heroku open
 
 ```sh
 $ npm install
-# dev:local (commit/push via git cli oder via IDE)
+# dev:local (commit/push via git cli)
 $ git add .
 $ git commit -m "Add cool API"
 $ git push -u origin main
