@@ -1,29 +1,63 @@
-# node-js-getting-started
+# heroku-nodejs-boilerplate
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+Ein Leitfaden zum Aufsetzen eines eigenen Nodejs-App Repository (!fork) für heroku. 
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+Das Original dieser Ableitung: [heroku/node-js-getting-started](https://github.com/heroku/node-js-getting-started)
 
-## Running Locally
+Online-Anleitung von heroku: [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
 
+
+## Heroku`s boilerplate via Github-Importer kopieren
+
+Über das erste Formularfeld des [Github-Importers](https://github.com/new/import) dieses Quell-Repository eingeben:
+
+```sh
+https://github.com/heroku/node-js-getting-started.git
+```
+danach die Ziel-Repository Details eingeben, fertig!
+
+
+# Heroku login
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ heroku login
+```
+
+## Running Locally
+
+```sh
+$ git clone https://github.com/<your-username>/<repo-name>.git
+$ cd repo-name
 $ npm install
-$ npm start
+$ npm start 
+# oder $ heroku local
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Deploying to Heroku
-
+## Create App-Container on Heroku
+via ps:scale den plan skalieren (1:free;2:hobby(7$))
+```sh
+$ heroku create custom-app-name
+$ git push heroku main
+$ heroku ps:scale web=1
+$ heroku open
 ```
-$ heroku create
+
+## Work & Deploying to Heroku
+
+```sh
+$ npm install
+# dev:local (oder commit/push via IDE)
+$ git add .
+$ git commit -m "Add cool API"
+# prod:heroku (deploy)
 $ git push heroku main
 $ heroku open
 ```
+
+## Heroku 
 or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
