@@ -26,18 +26,23 @@ $ heroku login
 
 ## Running Locally
 
+Jetzt können wir das eben kopierte Repository über unser eigenes Github-Konto klonen und direkt damit arbeiten.
+
 ```sh
 $ git clone https://github.com/<your-username>/<repo-name>.git
 $ cd repo-name
 $ npm install
-$ npm start 
-# oder $ heroku local
+$ npm start  # oder $ heroku local
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Create App-Container on Heroku
-via ps:scale den plan skalieren (1:free;2:hobby(7$))
+via ps:scale den plan skalieren
++ web=1: free
++ web=2: hobby (7$/month)
++ [Preise Heroku](https://www.heroku.com/pricing)
+
 ```sh
 $ heroku create custom-app-name
 $ git push heroku main
