@@ -57,7 +57,7 @@ $ npm install
 # dev:local (commit/push via git cli oder via IDE)
 $ git add .
 $ git commit -m "Add cool API"
-$ git push -u origin master
+$ git push -u origin main
 # prod:heroku (deploy)
 $ git push heroku main
 $ heroku open
