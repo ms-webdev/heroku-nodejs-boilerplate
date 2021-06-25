@@ -44,10 +44,11 @@ via ps:scale den plan skalieren
 + [Preise Heroku](https://www.heroku.com/pricing)
 
 ```sh
-$ heroku create custom-app-name
+$ heroku create custom-app-name --region eu
 $ git push heroku main
 $ heroku ps:scale web=1
 $ heroku open
+$ heroku info # get instance info
 ```
 
 ## Work & Deploying to Heroku
